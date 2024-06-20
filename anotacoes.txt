@@ -1,0 +1,67 @@
+Laravel - framework PHP. Possui vários produtos e bibliotecas
+versão mais atual: 11. Lançam novas versões anualmente.
+
+Blade - engine de templates de views com Laravel
+Livewire - framework Laravel pra dev frontend (similar a Vue.js e React)
+Inertia - Biblioteca que integra back-end Laravel com frontend Vue ou React
+Artisan - CLI do Laravel. Similar ao CLI do Angular, onde vc especifica na linha de comando e ele ja cria projetos
+Valet - ambiente de dev minimalista pra macOS. ideal pra aplicações simples ou que não demandam muita memória.
+Homestead - ambiente de dev que usa box de VM do Vagrant. Permite criar e deletar VMs de forma rápida.
+Herd - ambiente de dev completo e rápido pra Windows. Vem com o Valet instalado.
+Sail - CLI do Laravel que integra com serviços Docker
+Pint - opinionated PHP code style fixer. Presente ao instalar um novo projeto Laravel.
+Vite.js - "empacotador" de arquivos CSS e JS pra produçao (não foi feito pela Laravel)
+Tinker - um REPL (read-eval-print loop), ou seja, uma ferramenta que interage com o código do projeto pelo CLI. utilizado 	para pesquisar e interagir com coisas em todo o codigo do projeto.
+Eloquent - um ORM (object-relational mapper), responsável por criar e gerenciar modelos para que a app interaja com o DB.
+
+COMANDOS:
+
+*Iniciar Laravel e o servidor:
+composer create-project laravel/laravel chirper
+cd chirper
+php artisan serve (inicia um servidor no localhost:8000)
+
+*Instalar Breeze (starter kit/scaffolding) e Blade (template de views):
+composer require laravel/breeze --dev (instala breeze e inicia o ambiente de desenvolvimento front)
+php artisan breeze:install blade
+
+*Instalar as dependencias NPM:
+npm install
+
+*Iniciar Vite dev server:
+npm run dev
+
+*Utilizar Vite para empacotar CSS e JS:
+npm run build
+
+*Realizar migraçoes de database:
+php artisan migrate
+
+*Reconstruir database do zero com migrations:
+php artisan migrate:fresh
+
+*Ver opçoes disponiveis do artisan make:model :
+php artisan make:model --help
+
+*Criar models, controllers e resource controller de uma entidade/classe:
+*Cria um controller ChirpController.php, um model Chirp.php, e um migration create_chirps_table.php*
+php artisan make:model -mrc Chirp
+
+*Ver lista de rotas da aplicação:
+php artisan route:list
+
+*Ver dados do banco de dados: (a extensao 'intl' do PHP.ini deve estar habilitada)(para encontrar qual o 
+local do PHP.ini do server, usar 'php -m > php.txt' no CLI, Loaded Config File)
+php artisan db:show 
+
+*Ver uma tabela especifica:
+php artisan db:table users
+
+*Iniciar sessao do Laravel Tinker:
+php artisan tinker
+App\Models\Chirp::all(); (mostra todos os chirps do DB)
+
+
+
+
+
