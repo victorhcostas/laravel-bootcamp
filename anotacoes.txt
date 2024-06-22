@@ -61,6 +61,9 @@ php artisan db:table users
 php artisan tinker
 App\Models\Chirp::all(); (mostra todos os chirps do DB)
 
+*Configurar um arquivo de apólice de autorizaçao
+php artisan make:policy ChirpPolicy --model=Chirp
+
 
 
 
