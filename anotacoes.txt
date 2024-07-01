@@ -64,6 +64,37 @@ App\Models\Chirp::all(); (mostra todos os chirps do DB)
 *Configurar um arquivo de apólice de autorizaçao
 php artisan make:policy ChirpPolicy --model=Chirp
 
+*Criar uma nova notificaçao:
+php artisan make:notification NewChirp
+
+*Criar um novo evento:
+php artisan make:event ChirpCreated
+
+*Criar novo event listener:
+php artisan make:listener SendChirpCreatedNotifications --event=ChirpCreated
+
+*Iniciar os listeners e os jobs:
+php artisan queue:work
+
+*Rodar server Mailpit
+cd c:\mailpit
+.\mailpit.exe
+
+*E-mail de teste Mailpit (PowerShell):
+Get-Content email.txt | .\mailpit.exe sendmail
+ou (em Bash):
+mailpit sendmail < email.txt
+
+*Limpar cache de configuraçoes:
+php artisan config:cache
+
+
+
+
+
+
+
+
 
 
 
